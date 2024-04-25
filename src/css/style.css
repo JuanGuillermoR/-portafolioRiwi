@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url("../../Public/Img/spaceBackgroundHeader.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    p{
+        font-size: 2rem;
+        span{
+            color: blue;
+            background-color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 0 20px;
+        }
+    }
+}
+
+.header_nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 40px;
+    background-color: rgba(14, 5, 70, 0.466);
+}
+
+.menu{
+    margin-left: auto;
+}
+
+.list_menu{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+}
+
+.links{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.links:hover{
+    background-color: white;
+    color: blue;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0 20px;
+}
+.avatar{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.avatar_user{
+    width: 200px;
+    align-items: center;
+}
+
+.bi{
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .hamburguer{
+        display: block;
+        background-color: blue;
+        border-radius: 4px;
+        margin-left: auto;
+    }
+    
+    box-icon{
+        width: 100px;
+    }
+
+    .close{
+        display: block;
+    }
+
+    .list_menu{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 20px;
+        width: 150px;
+        box-shadow: 0 0 0 100vmax rgb( 0, 0, 0, .5 );
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* 3. Lazy loading de imágenes: El lazy loading es una técnica que consiste en cargar las imágenes a medida que el usuario las va visualizando en la página. Esto ayuda a mejorar la velocidad de carga inicial del sitio web, ya que no se carga de manera inmediata todo el contenido visual.
+
+Ejemplo:
+
+img.lazy {
+opacity: 0;
+}
+
+img.lazy.loaded {
+opacity: 1;
+transition: opacity 0. */
